@@ -8,7 +8,9 @@ This repository features a machine learning model trained on the Pima Indians Di
 - [Dataset Description](#dataset-description)  
 - [Installation Instructions](#installation-instructions)  
 - [Model and Techniques](#model-and-techniques)      
-- [Results and Performance](#results-and-performance)  
+- [Results and Performance](#results-and-performance)
+- [Improvements](#improvements)  
+    - [KNN Imputation Method for Missing Values](#knn-imputation-method-for-missing-values)  
 - [Usage Instructions](#usage-instructions)  
 - [Future Work](#future-work)
 
@@ -59,6 +61,18 @@ The model achieved an accuracy of 78% on the test set. Key performance metrics i
 - AUC score: 0.71
 
 Detailed performance metrics and visualizations are available in the results section of the repository.
+
+## Improvements  
+
+In this project, several improvements have been made to enhance the data preprocessing and model performance processes. 
+
+1. **KNN Imputation for Missing Values.** 
+
+### KNN Imputation Method for Missing Values  
+
+In this update, I have added a new method for handling missing values using KNN Imputation. This method improves the data preprocessing step by providing a more robust way to impute missing values based on the nearest neighbors. The benefits of KNN Imputation are:  
+- **Preservation of Relationships**: KNN considers the similarity of data points, which helps maintain the relationships between features when imputing missing values.  
+- **Improved Model Performance**: Proper handling of missing data can lead to enhanced model accuracy and reliability.
 
 ## Usage Instructions
 
