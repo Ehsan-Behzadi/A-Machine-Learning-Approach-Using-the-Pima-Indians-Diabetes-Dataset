@@ -10,7 +10,8 @@ This repository features a machine learning model trained on the Pima Indians Di
 - [Model and Techniques](#model-and-techniques)      
 - [Results and Performance](#results-and-performance)
 - [Improvements](#improvements)  
-    - [KNN Imputation Method for Missing Values](#knn-imputation-method-for-missing-values)  
+    - [KNN Imputation Method for Missing Values](#knn-imputation-method-for-missing-values)
+    - [PCA Method for Feature Selection](#pca-method-for-feature-selection)  
 - [Usage Instructions](#usage-instructions)  
 - [Future Work](#future-work)
 
@@ -66,13 +67,20 @@ Detailed performance metrics and visualizations are available in the results sec
 
 In this project, several improvements have been made to enhance the data preprocessing and model performance processes. 
 
-1. **KNN Imputation for Missing Values.** 
+1. **KNN Imputation for Missing Values.**
+2. **PCA Method for Feature Selection.** 
 
 ### KNN Imputation Method for Missing Values  
 
 In this update, I have added a new method for handling missing values using KNN Imputation. This method improves the data preprocessing step by providing a more robust way to impute missing values based on the nearest neighbors. The benefits of KNN Imputation are:  
 - **Preservation of Relationships**: KNN considers the similarity of data points, which helps maintain the relationships between features when imputing missing values.  
 - **Improved Model Performance**: Proper handling of missing data can lead to enhanced model accuracy and reliability.
+
+### PCA Method for Feature Selection
+
+A key aspect of this analysis is feature selection, which in this update, I employ Principal Component Analysis (PCA) to reduce the number of variables and retain the most relevant information.
+
+Principal Component Analysis (PCA) is a dimensionality reduction technique. It transforms the original variables into a new set of uncorrelated variables called principal components, ordered by the amount of variance they capture from the data. By using PCA, we can efficiently eliminate less important features, enhancing model interpretability and performance.
 
 ## Usage Instructions
 
