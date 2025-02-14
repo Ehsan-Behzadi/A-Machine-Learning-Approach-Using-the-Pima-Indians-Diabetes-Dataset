@@ -11,7 +11,8 @@ This repository features a machine learning model trained on the Pima Indians Di
 - [Results and Performance](#results-and-performance)
 - [Improvements](#improvements)  
     - [KNN Imputation Method for Missing Values](#knn-imputation-method-for-missing-values)
-    - [PCA Method for Feature Selection](#pca-method-for-feature-selection)  
+    - [PCA Method for Feature Selection](#pca-method-for-feature-selection) 
+    - [New Validation Methods](#new-validation-methods) 
 - [Usage Instructions](#usage-instructions)  
 - [Future Work](#future-work)
 
@@ -68,7 +69,8 @@ Detailed performance metrics and visualizations are available in the results sec
 In this project, several improvements have been made to enhance the data preprocessing and model performance processes. 
 
 1. **KNN Imputation for Missing Values.**
-2. **PCA Method for Feature Selection.** 
+2. **PCA Method for Feature Selection.**
+3. **New Validation Methods** 
 
 ### KNN Imputation Method for Missing Values  
 
@@ -81,6 +83,30 @@ In this update, I have added a new method for handling missing values using KNN 
 A key aspect of this analysis is feature selection, which in this update, I employ Principal Component Analysis (PCA) to reduce the number of variables and retain the most relevant information.
 
 Principal Component Analysis (PCA) is a dimensionality reduction technique. It transforms the original variables into a new set of uncorrelated variables called principal components, ordered by the amount of variance they capture from the data. By using PCA, we can efficiently eliminate less important features, enhancing model interpretability and performance.
+
+### New Validation Methods
+
+The model has been updated to incorporate new validation methods for enhanced accuracy and reliability, utilizing cross-validation and leave-one-out cross-validation techniques.
+
+### 1. Cross-Validation  
+
+Cross-validation is a statistical method used to estimate the skill of machine learning models. It involves partitioning the data into subsets, training the model on some subsets while validating it on others. This process is repeated several times to improve the accuracy of the model evaluation. The most common form is k-fold cross-validation, where the dataset is divided into 'k' subsets, and the model is trained and validated 'k' times, each time using a different subset as the validation set.
+
+### 2. Leave-One-Out Cross-Validation (LOOCV)  
+
+Leave-One-Out Cross-Validation is a special case of cross-validation where the number of subsets equals the number of data points in the dataset. This means that for each iteration, all data points except one are used for training, and the left-out data point is used for validation. This method provides a thorough evaluation of the model but can be computationally expensive for large datasets.
+
+### Outcome  
+
+The following are the results of various validation and performance metrics for the model:  
+
+- **Holdout:** 0.7767  
+- **Repeated random sampling:** 0.7767  
+- **Cross-validation:** 0.7794  
+- **Leave-one-out cross-validation:** 0.7794  
+- **Naive Bayes testing:** 0.7813    
+
+These outcomes indicate that the model's performance improved with the implementation of the updated validation techniques. 
 
 ## Usage Instructions
 
