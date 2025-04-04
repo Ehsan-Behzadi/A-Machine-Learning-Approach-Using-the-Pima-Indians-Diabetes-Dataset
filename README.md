@@ -12,7 +12,8 @@ This repository features a machine learning model trained on the Pima Indians Di
 - [Improvements](#improvements)  
     - [KNN Imputation Method for Missing Values](#knn-imputation-method-for-missing-values)
     - [PCA Method for Feature Selection](#pca-method-for-feature-selection) 
-    - [New Validation Methods](#new-validation-methods) 
+    - [New Validation Methods](#new-validation-methods)
+    - [Random Forest model](#random-forest-model)
 - [Usage Instructions](#usage-instructions)  
 - [Future Work](#future-work)
 
@@ -71,6 +72,7 @@ In this project, several improvements have been made to enhance the data preproc
 1. **KNN Imputation for Missing Values.**
 2. **PCA Method for Feature Selection.**
 3. **New Validation Methods** 
+4. **Add Random Forest model**
 
 ### KNN Imputation Method for Missing Values  
 
@@ -107,6 +109,32 @@ The following are the results of various validation and performance metrics for 
 - **Naive Bayes testing:** 0.7813    
 
 These outcomes indicate that the model's performance improved with the implementation of the updated validation techniques. 
+
+### Random Forest model
+
+The Random Forest model is an ensemble learning method that utilizes a collection of decision trees to improve predictive accuracy and control overfitting. It works by constructing multiple trees during training and outputting the mode of their predictions for classification tasks or the mean prediction for regression.
+
+#### Benefits of Random Forest
+
+- **Robustness:** Random Forest is less prone to overfitting compared to individual decision trees, making it more reliable for various datasets.  
+- **High Accuracy:** It often provides high accuracy in predictions, especially in complex and non-linear data scenarios.  
+- **Feature Importance:** The model can evaluate the importance of different features, providing insights into which variables significantly impact predictions.  
+- **Versatility:** Suitable for both classification and regression tasks.
+
+#### Model Evaluation  
+
+This implementation includes robust model evaluation using cross-validation. Here are the results of the model's performance:   
+- **Accuracy:** 0.83  
+- **Recall (Sensitivity or TPR):** 0.83  
+- **Precision:** 0.82  
+- **F1 Score:** 0.82    
+- **AUC Score:** 0.86  
+- **Cross-Validation Score:** 0.74
+
+These metrics indicate that the Random Forest model performs well on the dataset, achieving an accuracy of 0.83, which represents a significant improvement over the previous Naive Bayes model, which had an accuracy of only 0.78. Additionally, the Random Forest model effectively balances precision and recall, showcasing its robustness in comparison to the Naive Bayes approach. This demonstrates the added value of using ensemble methods for better predictive performance.
+
+- **Update Note:**  
+In this update, the ROC curve for the Naive Bayes model has also been refreshed to reflect the latest results and provide a clearer comparison of model performance.
 
 ## Usage Instructions
 
