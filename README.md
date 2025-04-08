@@ -14,6 +14,7 @@ This repository features a machine learning model trained on the Pima Indians Di
     - [PCA Method for Feature Selection](#pca-method-for-feature-selection) 
     - [New Validation Methods](#new-validation-methods)
     - [Random Forest model](#random-forest-model)
+    - [Random Forest Tuning](#random-forest-tuning)
 - [Usage Instructions](#usage-instructions)  
 - [Future Work](#future-work)
 
@@ -73,6 +74,7 @@ In this project, several improvements have been made to enhance the data preproc
 2. **PCA Method for Feature Selection.**
 3. **New Validation Methods** 
 4. **Add Random Forest model**
+5. **Random Forest Tuning**
 
 ### KNN Imputation Method for Missing Values  
 
@@ -135,6 +137,36 @@ These metrics indicate that the Random Forest model performs well on the dataset
 
 - **Update Note:**  
 In this update, the ROC curve for the Naive Bayes model has also been refreshed to reflect the latest results and provide a clearer comparison of model performance.
+
+### Random Forest Tuning
+
+This update involves a Random Forest model using GridSearchCV for hyperparameter tuning. The goal is to improve the model's performance in terms of accuracy, sensitivity, and other evaluation metrics.
+
+#### Tuning the Model with GridSearchCV
+
+GridSearchCV is a powerful tool provided by the `scikit-learn` library that allows us to systematically search through multiple combinations of hyperparameters for a machine learning model to find the best performing set.
+
+- **How It Works**:  
+   - **Parameter Grid**: Users define a grid of hyperparameters that they want to explore. For example, in a Random Forest model, the parameters can include the number of trees in the forest (`n_estimators`), the maximum depth of each tree (`max_depth`), and the minimum number of samples required to split an internal node (`min_samples_split`). 
+   - **Cross-Validation**: For each combination of parameters in the grid, GridSearchCV performs cross-validation, which means it splits the training data into multiple subsets (folds). The model is trained on some folds and validated on the others. This process repeats for each combination of hyperparameters to ensure a comprehensive evaluation.
+   - **Performance Metric**: The performance of each model is evaluated using a specified metric (e.g., accuracy, F1 score) to determine which combination yields the best performance.
+
+- **Benefits of Using GridSearchCV**:  
+     - **Exhaustive Search**: By searching across all combinations of the specified hyperparameters, GridSearchCV ensures that you find the optimal parameters for your model.  
+     - **Model Improvement**: Hyperparameter tuning can lead to significant improvements in model performance, as the model can become more suited to the underlying structure of the data.  
+     - **Prevent Overfitting**: By using cross-validation, GridSearchCV helps in assessing how well the model generalizes to an independent dataset, thereby reducing the risk of overfitting.  
+     - **Easy Integration**: GridSearchCV can be easily integrated into the model training workflow in `scikit-learn`, making it straightforward to implement. 
+
+#### Evaluate the Model
+
+After training and tuning the model, its performance is evaluated using various metrics like Accuracy, Recall, Precision, F1 Score, and AUC score. Results:
+- **Accuracy**: 0.83  
+- **Recall (Sensitivity / TPR)**: 0.83  
+- **Precision**: 0.82  
+- **F1 Score**: 0.82  
+- **AUC Score After Tuning**: 0.87
+
+Despite tuning the model using GridSearchCV, the final results for accuracy, sensitivity, precision, F1 score, and AUC score remained the same as the initial model. This suggests that there may need to be a review of feature selection or consideration of other algorithms for further improvement.
 
 ## Usage Instructions
 
